@@ -15,6 +15,8 @@ namespace ProblematicProblem
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
             cont = (Console.ReadLine());
             Console.WriteLine();
+            if (cont.ToUpper() == "YES")
+            {
             Console.Write("We are going to need your information first! What is your name? ");
             string userName = Console.ReadLine();
             Console.WriteLine();
@@ -77,7 +79,7 @@ namespace ProblematicProblem
                     Console.WriteLine();
                     int randomNumber = rng.Next(activities.Count);
                     string randomActivity = activities[randomNumber];
-                    if (userAge !< 21 && randomActivity == "Wine Tasting")
+                    if (userAge! < 21 && randomActivity == "Wine Tasting")
                     {
                         Console.WriteLine($"Oh no! Looks like you are too young to do {randomActivity}");
                         Console.WriteLine("Pick something else!");
@@ -88,6 +90,8 @@ namespace ProblematicProblem
                     Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                     Console.WriteLine();
                     cont = Console.ReadLine();
+        }
+                    Console.WriteLine("Alright, have fun with your selection!");
       }
     }
   }
